@@ -1,0 +1,1 @@
+nome = input("Ciao sono lorenzo e sono gay, mi piace il prosciutto con la stracciatella, bello grosso")
