@@ -42,6 +42,11 @@ class Macchina:
     else:
       self.velocita -= 5
 
+  def stampa_blocco(self):
+    self.stampa_macchina("\n")
+    print("velocita massiam:", self.calcola_velocita_massima())
+    print("\nvelocita attuale: ", self.velocita)
+
 def main():
   menu = 0
   a1 = Macchina("Mercedes", "AMG", 1700, "Benzina", "Nera Opaca")
@@ -62,8 +67,8 @@ def main():
     else:
       print("Scelta non valida.")
 
-    a1.stampa_macchina("\n")
-    print(f"Velocità attuale: {a1.velocita} km/h\n")
+    a1.stampa_blocco()
+    
 
 
 if __name__ == "__main__":
