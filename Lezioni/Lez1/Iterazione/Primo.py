@@ -4,15 +4,24 @@ Data: 15/04/2024
 Titolo:Si hanno in input due numeri reali A e B e una successione di numeri reali positivi che
 termina con il valore 0. Si vuole in output la media dei soli numeri compresi tra A e B.
 '''
-#dichiarazione delle variabili
-A = float(input("Inserisci il numero reale a: "))
-B = float(input("Inserisci il numero reale b: "))
-media = (A + B) / 2
+# Dichiarazione delle variabili
+A = float(input("Inserisci il numero reale a (maggiore di zero): "))
+B = float(input("Inserisci il numero reale b (maggiore di zero): "))
+somma = 0
+count = 0
 
+# Controllo se A e B sono numeri reali e se fossero reali allora accumula i numeri e conta quanti sono
+while True:
+    n = float(input("Inserisci un numero reale positivo (inserisci 0 per terminare): "))
+    if n < 0:
+        break
+    if A < n < B:
+        somma += n
+        count += 1
 
-#controllo se A e B sono numeri reali e se fossero reali allora stampa la media
-if A > 0 and B > 0 and A > 0 and A < B:
-    print("media: ", media)
+# Calcolo della media solo se sono stati inseriti numeri compresi tra A e B
+if count > 0:
+    media = somma / count
+    print("La media dei numeri compresi tra", A, "e", B, "è:", media)
 else:
-    print("impossibile")
-    
+    print("Non sono stati inseriti numeri compresi tra", A, "e", B)
