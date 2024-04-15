@@ -15,7 +15,7 @@ negativi = 0
 # Ciclo per chiedere i saldi e calcolare la somma dei saldi negativi
 for i in range(N):
     saldo = float(input("Inserisci il saldo del conto : "))
-    if saldo > 0:
+    if saldo < 0:
         s += saldo
         negativi += 1
 
