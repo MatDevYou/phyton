@@ -5,3 +5,4 @@ def sys_info():
     print("Info Release: " + platform.release())
 
 sys_info()
+

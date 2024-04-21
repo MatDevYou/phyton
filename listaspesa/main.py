@@ -1,3 +1,6 @@
+import database_lista
+
+
 elementi = []
 
 def switch(menu):
@@ -5,9 +8,10 @@ def switch(menu):
         # Visualizza la lista degli elementi
         print("La lista degli elementi è:", elementi)
     elif menu == "2":
-        # Aggiungi un elemento alla lista
-        elemento = input("Inserisci l'elemento da aggiungere: ")
-        elementi.append(elemento)
+        count = int(input("Indica quanti elementi hai comprato: "))
+        for i in range(count):
+            elemento = input("Inserisci l'elemento da aggiungere: ")
+            elementi.append(elemento)
         print("Elemento aggiunto con successo!")
     elif menu == "3":
         # Elimina un elemento dalla lista
