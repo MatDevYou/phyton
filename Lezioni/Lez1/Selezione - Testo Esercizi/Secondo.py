@@ -13,8 +13,7 @@ c = float(input("Inserisci il coefficiente c: "))
 delta = b **2 - 4*a*c #mi salvo la formula del delta in una variabile
 
 
-
-if delta > 0: 
+if delta > 0 and a != 0: 
     #2 soluzioni
     x1 = (-b - delta**0.5 / 2 * a)
     x2 = (-b + delta**0.5 / 2 * a)

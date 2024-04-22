@@ -9,9 +9,10 @@ A = float(input("Inserisci il numero reale a (maggiore di zero): "))
 B = float(input("Inserisci il numero reale b (maggiore di zero): "))
 somma = 0
 count = 0
+i = 1
 
 # Controllo se A e B sono numeri reali e se fossero reali allora accumula i numeri e conta quanti sono
-while True:
+while i != 0:
     n = float(input("Inserisci un numero reale positivo (inserisci 0 per terminare): "))
     if n < 0:
         break
