@@ -22,9 +22,9 @@ esempio: valuta_e(3) restituisce il valore calcolato nel punto 4.a 2.5 e 0,21828
 che rappresenta la differenza tra 2.718281828459045 e 2.5
 
 '''
-import math
- 
+#dichiarazione variabile
 Nepero = 2.718281828459045 
+
 
 def valuta_e(n):
     e = 0
@@ -35,8 +35,9 @@ def valuta_e(n):
         errore = Nepero - e
     return e, errore
 
+#inserisci numero che vuoi fattorizzare
 n = int(input("Inserisci numero: "))
 risultato = valuta_e(n)
-print(f"Il valore approssimato di e calcolato con {n} termini è:", risultato)
+print("Il valore approssimato di",n ,"e calcolato è:", risultato)
 
     
