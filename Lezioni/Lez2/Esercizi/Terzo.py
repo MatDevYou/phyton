@@ -8,7 +8,6 @@ F = ( 9 / 5 ) * C + 32
 Creare un programma principale che richiami la funzione e ne stampi il risultato
 visualizzando solo 3 cifre decimali.
 
-
 '''
 ##
 ## Funzioni:

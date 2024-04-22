@@ -9,9 +9,11 @@ tempo è maggiore. La funzione deve avere i parametri formali con valori predefi
 ##
 ## Funzioni:
 ##
-'''
-def fun(param1: int, param2: float) -> int:
 
+
+
+def secondi(ore  : int = 0, minuti : int = 0, secondi : int = 0):
+    '''
 Funzione: secondi
 
 Parametri formali:
@@ -32,9 +34,6 @@ Valore di ritorno:
  -> mi stampa quale dei due parametri messi prima ha il valore maggiore
 
 '''
-
-
-def secondi(ore  : int = 0, minuti : int = 0, secondi : int = 0):
     totaleSecondi = ore * 3600 + minuti * 60 + secondi
     return totaleSecondi
 

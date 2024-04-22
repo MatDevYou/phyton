@@ -10,9 +10,9 @@ output i risultati . No standard input.
 ##
 ## Funzioni:
 ##
-'''
-def fun(param1: int, param2: float) -> int:
 
+def sommaProdotto(*pari: float) -> tuple:
+    '''
 Funzione: sommaProdotto
 
 Parametri formali:
@@ -23,8 +23,6 @@ Valore di ritorno:
 somma, dispari -> ritorno la somma se sono numeri pari e il prodotto se sono numeri dispari
 
 '''
-
-def sommaProdotto(*pari: float) -> tuple:
     somma = 0
     dispari = 1
     for num in pari:
@@ -40,6 +38,7 @@ numeri = (2, 3, 8, 3)
 #salvo i risultati delle funzio
 risultatoSomma, risultatoProdotto = sommaProdotto(*numeri)
 
+#output dove stampo il risultato della somma dei numeri pari e il risultato del prodotto dei numeri dispari
 print("Risultato somma:", risultatoSomma)
 print("Risultato prodotto:", risultatoProdotto)
 
