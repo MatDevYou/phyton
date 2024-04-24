@@ -38,6 +38,12 @@ Valore di ritorno:
     return totaleSecondi
 
 def confrontaTempo(t1, t2):
+    '''
+    Funzoine. confrontaTempo
+    
+    Parametri formali:
+    t1 e t2 -> indicano i due tempi inserisci dall'utente
+    '''
     if t1 > t2:
         print("\nT1 è maggiore di T2")
     elif t2 > t1:

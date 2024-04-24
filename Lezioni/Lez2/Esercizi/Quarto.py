@@ -25,8 +25,8 @@ che rappresenta la differenza tra 2.718281828459045 e 2.5
 #dichiarazione variabile
 Nepero = 2.718281828459045 
 
-
-def valuta_e(n):
+#definisco funzione che esegue un ciclo 
+def valuta(n):
     e = 0
     fattoriale = 1
     for i in range(n):
@@ -37,7 +37,7 @@ def valuta_e(n):
 
 #inserisci numero che vuoi fattorizzare
 n = int(input("Inserisci numero: "))
-risultato = valuta_e(n)
+risultato = valuta(n)
 print("Il valore approssimato di",n ,"e calcolato è:", risultato)
 
     
