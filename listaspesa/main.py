@@ -1,41 +1,36 @@
+
 import database_lista
 
-
-elementi = []
-
+# Definizione della funzione switch
 def switch(menu):
     if menu == "1":
-        # Visualizza la lista degli elementi
-        print("La lista degli elementi è:", elementi)
+        database_lista.visualizza_spesa()
     elif menu == "2":
         count = int(input("Indica quanti elementi hai comprato: "))
         for i in range(count):
             elemento = input("Inserisci l'elemento da aggiungere: ")
-            elementi.append(elemento)
+            database_lista.aggiungi_elemento(elemento)
         print("Elemento aggiunto con successo!")
     elif menu == "3":
-        # Elimina un elemento dalla lista
-        if len(elementi) == 0:
-            print("La lista è vuota. Non ci sono elementi da eliminare.")
-        else:
-            print("La lista degli elementi attuale è:", elementi)
-            elemento_da_elim = input("Inserisci l'elemento da eliminare: ")
-            if elemento_da_elim in elementi:
-                elementi.remove(elemento_da_elim)
-                print("Elemento eliminato con successo!")
-            else:
-                print("Elemento non trovato nella lista.")
+        elemento_da_elim = input("Inserisci l'elemento da eliminare: ")
+        database_lista.elimina_elemento(elemento_da_elim)
+        database_lista.conn.commit()
+        print("Elemento eliminato con successo!")
     else:
         print("Opzione non valida")
 
-a = 0
-
+# Menu
 print("Cosa vuoi fare?")
 print("1. Visualizza spesa")
 print("2. Aggiungi elemento")
 print("3. Elimina elemento")
 
-while a < 4:
-    scelta = input("Inserisci il numero corrispondente all'azione desiderata: ")
+# Loop per il menu
+while True:
+    scelta = input("Inserisci il numero corrispondente all'azione desiderata (o 'q' per uscire): ")
+    if scelta == 'q':
+        break
     switch(scelta)
-    a += 1
+
+# Chiusura della connessione al database
+database_lista.conn.close()

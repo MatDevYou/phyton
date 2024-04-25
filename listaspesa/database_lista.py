@@ -1,37 +1,5 @@
 import mysql.connector
 from mysql.connector import Error
-import pandas as pd
-
-pw = "Willy2003!"
-db = "spesa"
-
-def create_server_connection(host_name, user_name, user_password):
-    connection = None
-    try:
-        connection = mysql.connector.connect(
-            host=host_name,
-            user=user_name,
-            passwd=user_password
-        )
-        print("MySQL Database connection successful")
-    except Error as err:
-        print(f"Error: '{err}'")
-
-    return connection
-
-connection = create_server_connection("localhost", "root", pw)
-
-
-def create_database(connection, query):
-    cursor = connection.cursor()
-    try:
-        cursor.execute(query)
-        print("Database created successfully")
-    except Error as err:
-        print(f"Error: '{err}'")
-
-create_database_query = "CREATE DATABASE spesa"
-#create_database(connection, create_database_query)
 
 def create_db_connection(host_name, user_name, user_password, db_name):
     connection = None
@@ -42,29 +10,67 @@ def create_db_connection(host_name, user_name, user_password, db_name):
             passwd=user_password,
             database=db_name
         )
-        print("MySQL Database connection successful")
+        print("Connessione al database MySQL riuscita")
     except Error as err:
-        print(f"Error: '{err}'")
+        print(f"Errore: '{err}'")
 
     return connection
+
+def read_query(connection, query):
+    cursor = connection.cursor()
+    result = None
+    try:
+        cursor.execute(query)
+        result = cursor.fetchall()
+        return result
+    except Error as err:
+        print(f"Errore: '{err}'")
 
 def execute_query(connection, query):
     cursor = connection.cursor()
     try:
         cursor.execute(query)
         connection.commit()
-        print("Query successful")
+        print("Query eseguita con successo")
     except Error as err:
-        print(f"Error: '{err}'")
+        print(f"Errore: '{err}'")
 
-create_elements_table = """
-CREATE TABLE elements (
-  elements_id INT PRIMARY KEY,
-  name VARCHAR(40) NOT NULL,
-  descriptiom VARCHAR(40) NOT NULL,
-  price FLOAT NOT NULL  
-  );
- """
+# Connessione al database
+connection = create_db_connection("localhost", "root", "Willy2003!", "spesa")
 
-connection = create_db_connection("localhost", "root", pw, db) # Connettiti al database
-execute_query(connection, create_elements_table) # Esegui la query definita
+# Visualizza la tabella 'elements'
+q_select_elements = """
+SELECT *
+FROM elements;
+"""
+results_elements = read_query(connection, q_select_elements)
+if results_elements:
+    print("Risultati della query:")
+    for result in results_elements:
+        print(result)
+else:
+    print("Nessun risultato restituito dalla query")
+
+# Aggiungi un elemento
+element_name = input("Inserisci il nome dell'elemento da aggiungere: ")
+element_description = input("Inserisci la descrizione dell'elemento: ")
+element_price = float(input("Inserisci il prezzo dell'elemento: "))
+
+insert_query = f"""
+INSERT INTO elements (name, description, price)
+VALUES ('{element_name}', '{element_description}', {element_price});
+"""
+
+execute_query(connection, insert_query)
+
+# Elimina un elemento
+element_id_to_delete = int(input("Inserisci l'ID dell'elemento da eliminare: "))
+delete_query = f"""
+DELETE FROM elements
+WHERE elements_id = {element_id_to_delete};
+"""
+
+execute_query(connection, delete_query)
+
+# Chiudi la connessione al database
+connection.close()
