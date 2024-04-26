@@ -13,16 +13,15 @@ output i risultati . No standard input.
 
 def sommaProdotto(*pari: float) -> tuple:
     '''
-Funzione: sommaProdotto
+    Funzione: sommaProdotto
 
-Parametri formali:
-float pari -> inserimento di n numeri pari
+    Parametri formali:
+    float pari -> inserimento di n numeri pari
 
+    Valore di ritorno:
+    somma, dispari -> ritorno la somma se sono numeri pari e il prodotto se sono numeri dispari
 
-Valore di ritorno:
-somma, dispari -> ritorno la somma se sono numeri pari e il prodotto se sono numeri dispari
-
-'''
+    '''
     somma = 0
     dispari = 1
     for num in pari:

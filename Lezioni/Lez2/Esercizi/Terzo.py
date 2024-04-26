@@ -27,11 +27,24 @@ f -> ritorno il risultato della formula per la conversione
 '''
 
 def convertiCF (celsius: float) -> float:
+
+    '''
+    Funzione: convertiCF
+
+    Parametri formali:
+    float celsius -> inserimento di gradi celsius per la conversione
+
+
+    Valore di ritorno:
+    f -> ritorno il risultato della formula per la conversione
+    '''
     f = ( 9 / 5 ) * celsius + 32
     return f
 
+#faccio inserire all'utente il grado che voglio convertire
 a = float(input("inserisci gradi: "))
 
+#faccio un controllo rapido al grado e fallisce se minore di -273.15
 if a < -273.15:
     print("Impossibile")
 else:

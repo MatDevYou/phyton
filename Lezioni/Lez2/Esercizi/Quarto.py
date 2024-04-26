@@ -27,6 +27,12 @@ Nepero = 2.718281828459045
 
 #definisco funzione che esegue un ciclo 
 def valuta(n):
+    '''
+    Funzione: valuta
+    
+    Parametri formali:
+    e , fattoriale -> 
+    '''
     e = 0
     fattoriale = 1
     for i in range(n):
