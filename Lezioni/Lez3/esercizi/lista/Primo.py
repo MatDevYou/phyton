@@ -7,5 +7,9 @@ listaIN = [2, -4 ,5,6,5,5,2]
 listaOUT=[2,-4,5,6]
 '''
 
-lista = [2,-4,5,6,5,5,2]
+lista = [2, -4, 5, 6, 5, 5, 2]
+lista_senza_duplicati = list( set(lista))
+
+print("listaIN =", lista)
+print("listaOUT =", lista_senza_duplicati)
 
