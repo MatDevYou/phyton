@@ -74,3 +74,6 @@ execute_query(connection, delete_query)
 
 # Chiudi la connessione al database
 connection.close()
+        
+
+
