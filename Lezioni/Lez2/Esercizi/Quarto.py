@@ -46,4 +46,10 @@ n = int(input("Inserisci numero: "))
 risultato = valuta(n)
 print("Il valore approssimato di",n ,"e calcolato è:", risultato)
 
-    
+'''
+e è l'approssimazione corrente di e.
+fattoriale è il fattoriale corrente.
+Il ciclo for itera attraverso i numeri da 0 a n-1 (dove n è il numero specificato dall'utente) e aggiorna e e fattoriale con ciascuna iterazione.
+L'errore viene calcolato come la differenza tra il valore attuale di e e il valore vero di Nepero (denotato come Nepero nel codice).
+Infine, l'approssimazione di e e l'errore vengono restituiti come output della funzione.
+'''

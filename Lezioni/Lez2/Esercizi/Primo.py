@@ -50,6 +50,11 @@ def confrontaTempo(t1, t2):
         print("\nT2 è maggiore di T1")
     else:
         print("\nil tempo è uguale")
+        
+def inserisciTempo():
+    while (ora1 < 0) or (ora1 > 23):
+        ora1 = int(input("Inserisci ora: "))
+        
 
 #inserisci i parametri del tempo 1
 print("Inserisci TEMPO 1")
@@ -70,3 +75,4 @@ tempo2 = secondi(ora2, min2, sec2)
 confrontaTempo(tempo1, tempo2)
 
 
+#while not 0 <= ora1 <= 23: uguale al while scritto sopra ma piu corta e capibile

@@ -11,6 +11,7 @@ output i risultati . No standard input.
 ## Funzioni:
 ##
 
+#pari scritto con * prima significa che accetta argomenti variabili , è dinamico posso mettere quanti numeri voglio
 def sommaProdotto(*pari: float) -> tuple:
     '''
     Funzione: sommaProdotto
@@ -32,7 +33,7 @@ def sommaProdotto(*pari: float) -> tuple:
     return somma, dispari
 
 #definisco un array di numeri con all'interno numeri pari e dispari
-numeri = (2, 3, 8, 3)
+numeri = (2, 8)
 
 #salvo i risultati delle funzio
 risultatoSomma, risultatoProdotto = sommaProdotto(*numeri)
