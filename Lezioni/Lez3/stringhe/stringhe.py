@@ -11,3 +11,4 @@ str5 = '"Quinta" stringa'
 print(str5)
 str6 = "Sesta\" stringa"
 print(str6)
+
