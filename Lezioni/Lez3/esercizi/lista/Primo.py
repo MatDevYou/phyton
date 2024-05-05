@@ -7,9 +7,13 @@ listaIN = [2, -4 ,5,6,5,5,2]
 listaOUT=[2,-4,5,6]
 '''
 
+#dichiaro una lista da verificare
 lista = [2, -4, 5, 6, 5, 5, 2]
-lista_senza_duplicati = list( set(lista))
 
+#in questa variabile uso il set, mi aiuta a eliminae i duplicati presenti nella lista
+noDuplicati = list( set(lista))
+
+#output lista normale e lista senza duplicati
 print("listaIN =", lista)
-print("listaOUT =", lista_senza_duplicati)
+print("listaOUT =", noDuplicati)
 

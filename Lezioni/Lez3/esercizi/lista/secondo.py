@@ -22,7 +22,7 @@ def controllaLista(lista1, lista2):
     print("KO")
 
 #inizializzazione liste
-lista1 = [12, 5, 8]
+lista1 = [1, 5, 8]
 lista2 = [3, 1, 10]
 
 #output

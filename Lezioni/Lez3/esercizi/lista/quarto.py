@@ -11,9 +11,29 @@ Output : Prima parte: [1, 1, 2] ,
 Seconda parte: [3, 4, 4, 5, 1]
 '''
 
-#inizializzo lista
+def dividereLista(lista, lunghezza):
+    '''
+    Funzioen dividereLista
+
+    parametri
+
+    lista -> inserisco la stringa che voglio verifica
+    lunghezza -> quanto voglio dividere la stringa
+    '''
+    # Verifica se la lunghezza della prima parte è valida
+    if lunghezza < 0 or lunghezza > len(lista):
+        return "Errore: La lunghezza della prima parte non è valida"
+
+    # Divide la lista in due parti
+    primaParte = lista[:lunghezza]
+    secondaParte = lista[lunghezza:]
+
+    # Restituisce il risultato formattato
+    return "Prima parte: " + str(primaParte) + ", Seconda parte: " + str(secondaParte)
+
+# Lista originale e lunghezza della prima parte
 lista = [1, 1, 2, 3, 4, 4, 5, 1]
+lunghezza = 3
 
-
-print(lista[0:3])
-print(lista[3:9])
+# Chiama la funzione e stampa il risultato
+print(dividereLista(lista, lunghezza))
