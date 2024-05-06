@@ -1,0 +1,11 @@
+tuplaFalsa = (4)
+print(tuplaFalsa)
+print(type(tuplaFalsa))
+tuplaVera = (4,)
+print(tuplaVera)
+print(type(tuplaVera))
+print(len(tuplaVera))
+altraTuplaVera = 4,
+print(altraTuplaVera)
+print(type(AltraTuplaVera))
+print(len(AltraTuplaVera))

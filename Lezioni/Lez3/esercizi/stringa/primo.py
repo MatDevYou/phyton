@@ -24,7 +24,7 @@ def rimuoviCarattere(stringa, n):
 
 #dichiaro la stringa da verificare 
 str = "ciao"
-n = 2  # Rimuovere il terzo carattere ('a')
+n = -1  # Rimuovere il terzo carattere ('a')
 stringaMod = rimuoviCarattere(str, n)
 print(stringaMod)  
 
