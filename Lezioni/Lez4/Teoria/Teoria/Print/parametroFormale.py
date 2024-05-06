@@ -1,0 +1,6 @@
+print("Stampa su prima riga",end="\n")
+print("Stampa su seconda riga")
+print("Stampa su terza riga",end="\t")
+print("dopo tab su terza riga ",end=" XXX ")
+print("ancora su terza riga ")
+print("Fine esempio su terza riga ")
