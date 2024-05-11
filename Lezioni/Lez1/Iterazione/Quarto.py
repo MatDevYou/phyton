@@ -16,6 +16,7 @@ for i in range(1, numeri):
     n = int(input("Inserisci il numero successivo: "))
     if n < minore:
         minore = n
-
+        
+    
 print("Il minore è:", minore)
 
