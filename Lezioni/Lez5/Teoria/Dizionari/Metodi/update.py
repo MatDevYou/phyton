@@ -1,0 +1,13 @@
+diz1 ={'k1':'v1','k2':'v2'}
+diz1.update({'k4':'v4'})
+print(diz1)
+diz1.update({'k5':'v5','k6':'v6'})
+print(diz1)
+diz1.update(k1='VV1')
+print(diz1)
+diz1.update(k1='VVV11',k2='VVV2')
+print(diz1)
+diz1.update(k10='v10')
+print(diz1)
+diz1.update(k11)
+print(diz1)
