@@ -1,4 +1,3 @@
-import random
 '''
 
 Autore: Matteo Meringolo
