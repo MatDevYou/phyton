@@ -6,6 +6,7 @@ l'n- esimo carattere da una tupla non vuota.
 
 ''' 
 
+#dichiarazione della tupla e dell'input 
 tupla = ("pane", 12, 4, 9)
 n = int(input("Quale posizione della tupla vuoi eliminare? "))
 

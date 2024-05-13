@@ -9,7 +9,6 @@ def contaElementi(lista):
     '''
     Funzione : contaElementi
 
-<<<<<<< HEAD
     parametri
     lista -> passo l 
     
@@ -17,6 +16,7 @@ def contaElementi(lista):
     count = 0
     tuplaTrovata = False
 
+# isistance permette di verificare se un oggetto è un'istanza di una classe
     for elem in lista:
         if isinstance(elem, tuple):
             tupla_trovata = True
@@ -31,11 +31,7 @@ def contaElementi(lista):
 
     return count, len(lista)
 
-# Esempio di utilizzo
+# dichiarazione lista
 lista = [2, 5, 9, 7, 4, 1]
-count_prima_tupla, count_totale = contaElementi(lista)
+primaTupla, totale = contaElementi(lista)
 print("Numero totale di elementi nella lista:", contaElementi(lista))
-=======
-
-print(lista.len)
->>>>>>> 4603e118532b36d87f72411fef3adb4506fca1fd
