@@ -11,13 +11,28 @@ Dizionario: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 '''
 
 def genera(n):
-    dizionario = {}
-    for i in range(1, n + 1):
-        dizionario[i] = i * i
-    return dizionario
+    '''
+    Funzione genera
 
-n = int(input("inserisci quanti numeri vuoi generare : "))
+    parametri :
+    n -> il range di quanti numeri deve generare
+    
+    La funzione crea un dizionario dove le chiavi sono i numeri
+    da 1 a n e i valori sono i quadrati di questi numeri.
+    '''
 
-print(genera(n))
+    # Inizializza un dizionario vuoto
+    dizionario = {}  
+    # Itera attraverso i numeri da 1 a n inclusi
+    for i in range(1, n + 1):  
+        # Assegna al dizionario la chiave 'i' con il valore 'i' al quadrato
+        dizionario[i] = i * i  
+    return dizionario 
+
+ # Chiede all'utente di inserire un numero intero
+n = int(input("inserisci quanti numeri vuoi generare : ")) 
+# Stampa il dizionario generato dalla funzione 'genera'
+print(genera(n))  
+
 
 
