@@ -7,9 +7,14 @@ Titolo:Scrivete un programma Python per ottenere il valore massimo e minimo in u
 
 '''
 
-diz1 = {'v1':1,'v2':2,'v3':3}
+# Dichiaro un dizionario di esempio
+diz1 = {'v1': 1, 'v2': 2, 'v3': 3}
 
+# Trovo la chiave con il valore massimo nel dizionario
 valoreMax = max(diz1)
+
+# Trovo la chiave con il valore minimo nel dizionario
 valoreMin = min(diz1)
 
-print("Valore massimo:",valoreMax, "Valore minimo:", valoreMin)
+# Stampo le chiavi con i valori massimo e minimo
+print("Valore massimo:", valoreMax, "Valore minimo:", valoreMin)

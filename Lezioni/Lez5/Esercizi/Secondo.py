@@ -21,17 +21,18 @@ def genera(n):
     da 1 a n e i valori sono i quadrati di questi numeri.
     '''
 
-    # Inizializza un dizionario vuoto
+    # Inizializzo un dizionario vuoto
     dizionario = {}  
-    # Itera attraverso i numeri da 1 a n inclusi
+    # Itero attraverso i numeri da 1 a n inclusi
     for i in range(1, n + 1):  
         # Assegna al dizionario la chiave 'i' con il valore 'i' al quadrato
         dizionario[i] = i * i  
     return dizionario 
 
- # Chiede all'utente di inserire un numero intero
+ # Chiedo all'utente di inserire un numero intero
 n = int(input("inserisci quanti numeri vuoi generare : ")) 
-# Stampa il dizionario generato dalla funzione 'genera'
+
+# Stampo il dizionario generato dalla funzione 'genera'
 print(genera(n))  
 
 
