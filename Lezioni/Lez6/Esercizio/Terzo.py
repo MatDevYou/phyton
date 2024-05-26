@@ -12,42 +12,53 @@ Testare il metodo istanziando la classe.
 creare un metodo allTablesMult() per visualizzare tutte le tabelline di numeri interi 1, 2, 3, ...,
 '''
 
+
 class Calcolo(object):
+    # Metodo di inizializzazione della classe Calcolo.
+    # In questo caso, non vengono inizializzati attributi, quindi il metodo è vuoto.
     def __init__(self):
         pass
     
+    # Metodo per calcolare il fattoriale di un numero intero n.
     def Factorial(self, n):
         """
         Calcola il fattoriale di un numero intero n.
         """
         if n == 0:
-            return 1
+            return 1  # Il fattoriale di 0 è 1
         risultato = 1
+        # Calcolo del fattoriale mediante un ciclo for
         for i in range(1, n + 1):
             risultato *= i
         return risultato
     
+    # Metodo per calcolare la somma dei primi n numeri interi.
     def Sum(self, n):
         """
         Calcola la somma dei primi n numeri interi.
         """
         if n < 0:
-            return 0  # gestire il caso di numeri negativi
+            return 0  # Gestire il caso di numeri negativi
+        # Calcolo della somma utilizzando la formula della somma aritmetica
         return n * (n + 1) // 2
     
-    def tableMult(self, n, massimo =10):
+    # Metodo per stampare la tabellina del numero n fino a un valore massimo (default = 10).
+    def tableMult(self, n, massimo=10):
         """
-        Stampa la tabellina del numero n fino a limit.
+        Stampa la tabellina del numero n fino a massimo.
         """
         print(f"Tabellina del {n}:")
-        for i in range( massimo + 1):
+        # Stampa della tabellina utilizzando un ciclo for
+        for i in range(massimo + 1):
             print(f"{n} x {i} = {n * i}")
-        print()  # Aggiungo una riga vuota per separare le tabelline
+        print()  # Aggiunge una riga vuota per separare le tabelline
     
+    # Metodo per stampare le tabelline dei numeri da 1 a n fino a un valore massimo (default = 10).
     def allTablesMult(self, n, massimo=10):
         """
-        Stampa le tabelline dei numeri da 1 a n fino a limit.
+        Stampa le tabelline dei numeri da 1 a n fino a massimo.
         """
+        # Stampa delle tabelline utilizzando un ciclo for
         for i in range(n + 1):
             self.tableMult(i, massimo)
 
@@ -69,3 +80,4 @@ calcolo.tableMult(numero)
 # Test del metodo allTablesMult
 numero = 5
 calcolo.allTablesMult(numero)
+
