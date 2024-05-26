@@ -16,43 +16,58 @@ del secondo rettangolo.
 
 
 class Rettangolo(object):
-    def __init__(self,base,altezza):
+    # Metodo di inizializzazione della classe Rettangolo.
+    # Inizializza le proprietà 'base' e 'altezza' con i valori forniti.
+    def __init__(self, base, altezza):
         self.__base = base
         self.__altezza = altezza
         
+    # Restituisce il valore della base del rettangolo.
     def GetBase(self):
         return self.__base
     
+    # Restituisce il valore dell'altezza del rettangolo.
     def GetAltezza(self):
         return self.__altezza
     
-    def SetAltezza(self,val):
+    # Imposta un nuovo valore per l'altezza del rettangolo.
+    def SetAltezza(self, val):
         self.__altezza = val
     
-    def SetBase(self,val):
+    # Imposta un nuovo valore per la base del rettangolo.
+    def SetBase(self, val):
         self.__base = val
     
+    # Calcola e restituisce l'area del rettangolo.
     def Area(self):
         return self.__base * self.__altezza
     
+    # Calcola e restituisce il perimetro del rettangolo.
     def Perimetro(self):
         return (self.__base + self.__altezza) * 2
     
+    # Verifica se il rettangolo corrente contiene un altro rettangolo.
+    # Restituisce True se il rettangolo corrente ha sia una base che un'altezza
+    # maggiori di quelle del nuovo rettangolo fornito, altrimenti False.
     def Contiene(self, NuovoRettangolo):
         return self.__base > NuovoRettangolo.GetBase() and self.__altezza > NuovoRettangolo.GetAltezza()
     
+    # Restituisce una rappresentazione in stringa del rettangolo.
     def __str__(self):
-        return f"\nBase: {self.__base}\nAltezza: {self.__altezza}\nPerimtro: {self.Perimetro()}\nArea: {self.Area()}"
+        return f"\nBase: {self.__base}\nAltezza: {self.__altezza}\nPerimetro: {self.Perimetro()}\nArea: {self.Area()}"
 
-rettangolo = Rettangolo(10,5)
-rettangolo1 = Rettangolo(8,3)
+# Creazione di due oggetti Rettangolo con valori di base e altezza specificati.
+rettangolo = Rettangolo(10, 5)
+rettangolo1 = Rettangolo(8, 3)
 
+# Stampa delle informazioni sui rettangoli.
 print(rettangolo)
 print(rettangolo1)
 
-
+# Verifica se il primo rettangolo contiene il secondo rettangolo.
 contiene = rettangolo.Contiene(rettangolo1)
 
+# Stampa il risultato della verifica di contenimento.
+print("\nSe true lo contiene se false non lo contiene: ", contiene)
 
-print("\nSe true lo contiene se false non lo contiene: ",contiene)
 
