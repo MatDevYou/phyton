@@ -84,4 +84,26 @@ class Studente(Persona):
     # Metodo speciale che definisce la rappresentazione in stringa dell'oggetto
     def __str__(self):
         # Restituisce una stringa con gli attributi della superclasse e quelli della classe Studente
-        return f"{super().__str__()}, Scuola: {self.scuola}, Media Voti: {self.mediavoti}"
+        return f"{super().__str__()}, Scuola: {self.__scuola}, Media Voti: {self.__mediavoti}"
+    
+class Lavoratore(Persona):
+    def __init__(self, nome, eta, indirizzo,azienda,stipendio):
+        super().__init__(nome, eta, indirizzo)
+        self.__azienda = azienda
+        self.__stipendio = stipendio
+        
+    def getAzienda(self):
+        return self.__azienda 
+    
+    def getStipendio(self):
+        return self.__stipendio
+    
+    def setAzienda(self,val):
+        self.__azienda = val
+        
+    def setStipendio(self,val):
+        self.__stipendio = val
+        
+    def __str__(self):
+        return f"{super().__str__}, Azienda: {self.__azienda}, Stipendio: {self.__stipendio}"   
+        
