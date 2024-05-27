@@ -55,10 +55,10 @@ class Cerchio(object):
             print("secante") 
         elif distanzaCentro == differenzaRaggi:
             print("tangente internamente") 
+        elif distanzaCentro < differenzaRaggi and distanzaCentro > 0:
+            print("interno") 
         elif distanzaCentro == 0:
             print("concentrici") 
-        elif distanzaCentro < differenzaRaggi:
-            print("interno") 
         
         
         
@@ -68,7 +68,7 @@ c1 = Cerchio(Punto(0, 0), 5)
 c2 = Cerchio(Punto(10, 0), 3)
 c3 = Cerchio(Punto(5, 0), 2)
 c4 = Cerchio(Punto(7, 0), 3)
-c5 = Cerchio(Punto(7, 0), 2)
+c5 = Cerchio(Punto(7, 0), 10)
 
 
 c1.posizione(c2)  # esterno
