@@ -70,4 +70,4 @@ contiene = rettangolo.Contiene(rettangolo1)
 # Stampa il risultato della verifica di contenimento.
 print("\nSe true lo contiene se false non lo contiene: ", contiene)
 
-
+  
