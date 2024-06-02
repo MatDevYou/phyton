@@ -71,4 +71,5 @@ class AritmeticaTre(AritmeticaDue):
         return self.__operando1+self.__operando2+self.__operando3
     
 
-    
+aritmeticaDue = AritmeticaDue(3,2)
+print(aritmeticaDue)
