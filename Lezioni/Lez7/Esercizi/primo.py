@@ -26,48 +26,38 @@ metodo.
 
 '''
 
-class Persona(object):
-    # Metodo di inizializzazione della classe, chiamato quando si crea un'istanza della classe
+class Persona:
     def __init__(self, nome, eta, indirizzo):
-        # Inizializzazione degli attributi dell'oggetto
-        self.__nome = nome  # Attributo pubblico per il nome
-        self.__eta = eta  # Attributo pubblico per l'età
-        self.__indirizzo = indirizzo  # Attributo privato per lo stipendio
+        self.__nome = nome
+        self.__eta = eta
+        self.__indirizzo = indirizzo
         
-    # Metodo per ottenere il valore dell'attributo 'nome'
     def getNome(self):
         return self.__nome  
     
-    # Metodo per ottenere il valore dell'attributo 'eta'
     def getEta(self):
         return self.__eta
     
-    # Metodo per ottenere il valore dell'attributo privato 'stipendio'
     def getIndirizzo(self):
         return self.__indirizzo
     
-    # Metodo per impostare un nuovo valore per l'attributo 'nome'
     def setNome(self, val):
         self.__nome = val
         
-    # Metodo per impostare un nuovo valore per l'attributo 'eta'
     def setEta(self, val):
         self.__eta = val
         
-    # Metodo per impostare un nuovo valore per l'attributo privato 'stipendio'
     def setIndirizzo(self, val):
         self.__indirizzo = val
       
-    # Metodo speciale che definisce la rappresentazione in stringa dell'oggetto
     def __str__(self):
-        # Restituisce una stringa con gli attributi nome e età
-        return f"\n\nNome: {self.nome}, \nEtà: {self.eta}, \nIndirizzo: {self.__indirizzo}"
+        return f"Nome: {self.__nome}, Età: {self.__eta}, Indirizzo: {self.__indirizzo}"
     
 class Studente(Persona):
     def __init__(self, nome, eta, indirizzo, scuola, mediavoti):
-        super().__init__(nome, eta, indirizzo)  # Chiamata al costruttore della superclasse
-        self.__scuola = scuola  # Attributo pubblico per la scuola
-        self.__mediavoti = mediavoti  # Attributo pubblico per la media dei voti
+        super().__init__(nome, eta, indirizzo)
+        self.__scuola = scuola
+        self.__mediavoti = mediavoti
         
     def getScuola(self):
         return self.__scuola 
@@ -75,19 +65,17 @@ class Studente(Persona):
     def getMediaVoti(self):
         return self.__mediavoti
     
-    def setScuola(self,val):
+    def setScuola(self, val):
         self.__scuola = val
         
-    def setMediaVoti(self,val):
+    def setMediaVoti(self, val):
         self.__mediavoti = val
     
-    # Metodo speciale che definisce la rappresentazione in stringa dell'oggetto
     def __str__(self):
-        # Restituisce una stringa con gli attributi della superclasse e quelli della classe Studente
         return f"{super().__str__()}, Scuola: {self.__scuola}, Media Voti: {self.__mediavoti}"
     
 class Lavoratore(Persona):
-    def __init__(self, nome, eta, indirizzo,azienda,stipendio):
+    def __init__(self, nome, eta, indirizzo, azienda, stipendio):
         super().__init__(nome, eta, indirizzo)
         self.__azienda = azienda
         self.__stipendio = stipendio
@@ -98,12 +86,38 @@ class Lavoratore(Persona):
     def getStipendio(self):
         return self.__stipendio
     
-    def setAzienda(self,val):
+    def setAzienda(self, val):
         self.__azienda = val
         
-    def setStipendio(self,val):
+    def setStipendio(self, val):
         self.__stipendio = val
         
     def __str__(self):
-        return f"{super().__str__}, Azienda: {self.__azienda}, Stipendio: {self.__stipendio}"   
-        
+        return f"{super().__str__()}, Azienda: {self.__azienda}, Stipendio: {self.__stipendio}"   
+
+# Test delle classi
+persona = Persona("Mario Rossi", 40, "Via Roma 10, Milano")
+studente = Studente("Luca Bianchi", 20, "Via Milano 5, Roma", "Università di Roma", 28)
+lavoratore = Lavoratore("Giulia Verdi", 35, "Corso Torino 20, Torino", "Azienda Tech", 3000)
+
+# Prova dei metodi
+print(persona)
+print(studente)
+print(lavoratore)
+
+# Modifica degli attributi
+persona.setNome("Mario Rossi Jr.")
+persona.setEta(41)
+persona.setIndirizzo("Via Roma 15, Milano")
+
+studente.setScuola("Politecnico di Milano")
+studente.setMediaVoti(30)
+
+lavoratore.setAzienda("Azienda Software")
+lavoratore.setStipendio(3500)
+
+# Verifica delle modifiche
+print("\nDopo le modifiche:")
+print(persona)
+print(studente)
+print(lavoratore)
