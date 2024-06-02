@@ -131,8 +131,8 @@ aritmeticaTre = AritmeticaTre(3, 2, 1)
 
 # Prova dei metodi
 print(aritmeticaDue)
-print("\nDifferenza:", aritmeticaDue.differenza())
-print("\nProdotto:", aritmeticaDue.prodotto())
+print("Differenza:", aritmeticaDue.differenza())
+print("Prodotto:", aritmeticaDue.prodotto())
 
 print(aritmeticaTre)
 print("Differenza:", aritmeticaTre.differenza())
