@@ -29,6 +29,9 @@ class AritmeticaDue(object):
     def setOperando1(self,val):
         self.__operando1=val
 
+    def setOperando2(self, val):
+        self.__operando2=val
+        
     def __str__(self):
         return f"Operando1:{self.operando1} Operando2:{self.operando2}"
     
