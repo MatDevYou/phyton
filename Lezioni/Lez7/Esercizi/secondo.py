@@ -31,18 +31,44 @@ class AritmeticaDue(object):
 
     def setOperando2(self, val):
         self.__operando2=val
-        
+
     def __str__(self):
-        return f"Operando1:{self.operando1} Operando2:{self.operando2}"
+        return f"Operando1:{self.__operando1} Operando2:{self.operando2}"
     
     def differenza(self):
-        return self.operando1-self.operando2
+        return self.__operando1-self.__operando2
     
     def prodotto(self):
-        return self.operando1*self.operando2
+        return self.__operando1*self.__operando2
     
     def confronto(self,a):
         if self.prodotto()>a.prodotto():
             return True
         else:
             return False
+
+class AritmeticaTre(AritmeticaDue):
+    def __init__(self, operando1, operando2, operando3):
+        super().__init__(operando1, operando2)
+        self.__operando3=operando3
+
+    def getOperando3(self):
+        return self.__operando3
+
+    def setOperando3(self, val):
+        self.__operando3=val
+
+    def __str__(self):
+        return f"Operando1:{self.__operando1} Operando2:{self.__operando2} Operando3:{self.__operando3}"
+    
+    def differenza(self):
+        return self.__operando1-self.__operando2-self.__operando3
+
+    def somma(self):
+        return self.__operando1+self.__operando2+self.__operando3
+
+    def somma(self):
+        return self.__operando1+self.__operando2+self.__operando3
+    
+
+    
