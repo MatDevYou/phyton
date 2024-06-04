@@ -5,7 +5,7 @@ righe.append("terza riga ")
 righe.append("-----------\n")
 righe.append("Ultima riga\n")
 
-fh = open("fileout.txt","w")
+fh = open("Lezioni/Lez8/Teoria/fileout.txt","w")
 
 for riga in righe:
     fh.write(riga)

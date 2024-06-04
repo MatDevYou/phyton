@@ -1,4 +1,4 @@
-fh = open("file.txt","r")
+fh = open("Lezioni/Lez8/Teoria/file.txt","r")
 
 print(fh)
 
