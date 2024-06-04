@@ -7,3 +7,13 @@ while(not eof):
     else:
         eof = True
 fh.close()
+
+#########################
+#altra notazione 
+
+fh = open("file.txt")
+riga = fh.readline()
+while riga:
+    print(riga,end='')
+    riga = fh.readline()
+fh.close()
