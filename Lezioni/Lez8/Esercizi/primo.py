@@ -7,18 +7,18 @@ Successivamente aprire il file “stringa.txt” e verificare il salvataggio.
     
 '''
 
-def salva_stringa():
+def salvaStringa():
     # Leggere la stringa da tastiera
     stringa = input("Inserisci una stringa: ")
     
     # Salvare la stringa nel file "stringa.txt"
-    file = open("stringa.txt", "w")
+    file = open("Lezioni/Lez8/Esercizi/stringa.txt","w")
     file.write(stringa)
     file.close()
     
     print("Stringa salvata su 'stringa.txt'.")
 
-def verifica_salvataggio():
+def verificaSalvataggio():
     # Leggere il contenuto del file "stringa.txt"
     try:
         file = open("stringa.txt", "r")
@@ -30,8 +30,8 @@ def verifica_salvataggio():
         print("Errore: Il file 'stringa.txt' non esiste.")
 
 # Chiamare direttamente le funzioni
-salva_stringa()
-verifica_salvataggio()
+salvaStringa()
+verificaSalvataggio()
 
 
 
