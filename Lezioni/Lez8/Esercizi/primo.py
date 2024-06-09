@@ -1,8 +1,9 @@
 '''
-    Autore: Matteo Meringolo
-    Data: 04/06/2024
+Autore: Matteo Meringolo
+Data: 04/06/2024
 
-    Titolo:
+Titolo:Scrivere un programma che, leggendo da tastiera una stringa, la salvi su file “stringa.txt”.
+Successivamente aprire il file “stringa.txt” e verificare il salvataggio.
     
 '''
 
