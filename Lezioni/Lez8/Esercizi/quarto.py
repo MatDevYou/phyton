@@ -30,3 +30,5 @@ def copiaFile(nomefileSorgente, nomefileDestinazione):
 
 # Esempio di utilizzo
 copiaFile('Lezioni/Lez8/Esercizi/stringa.txt', 'Lezioni/Lez8/Esercizi/output.txt')
+
+
