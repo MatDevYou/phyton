@@ -6,6 +6,7 @@ cursor = db.cursor()
 print(cursor)
 # Drop table if it already exist using execute() method.
 print(cursor.execute("DROP TABLE IF EXISTS IMPIEGATO"))
+
 # Create table
 sql = """CREATE TABLE IMPIEGATO (
 ID INT(3) NOT NULL,
